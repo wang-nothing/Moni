@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.admin.moni.MainActivity;
 import com.example.admin.moni.R;
@@ -24,6 +25,8 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShowActivity extends AppCompatActivity implements View.OnClickListener,Show_Iview {
@@ -39,6 +42,7 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
     private List<GoodBean.DataBean> mData;
     private RecyclerAdapter mAdapter;
     private String mTv_search;
+    private String mPid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,7 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
         initeListenr();
         mPresenter = new ShowPresenter(this);
         mPresenter.getDatas(keywords, page, sort);
+
     }
 
     private void initeListenr() {
@@ -96,6 +101,7 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
         recyclerview = findViewById(R.id.recyclerview);
         recyclerview.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recyclerview.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL ,false));
+
     }
 
     @Override
@@ -125,7 +131,6 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
                 recyclerview.setLayoutManager(new LinearLayoutManager(this));
                 show_image_list.setVisibility(View.VISIBLE);
                 show_image_grid.setVisibility(View.INVISIBLE);
-
                 break;
 
             case R.id.show_tv_zonghe:
@@ -155,6 +160,17 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
                 mAdapter = new RecyclerAdapter(ShowActivity.this, mData);
                 mData.addAll(goodBean.getData());
                 recyclerview.setAdapter(mAdapter);
+                mAdapter.setOnItemclick(new RecyclerAdapter.onItemclick() {
+                    @Override
+                    public void itemclick(List<GoodBean.DataBean> mData) {
+                        for (int i = 0; i < mData.size(); i++) {
+                            mPid = mData.get(i).getPid();
+                        }
+                        Intent intent = new Intent(ShowActivity.this, ShopingActivity.class);
+                        intent.putExtra("pid", mPid);
+                        startActivity(intent);
+                    }
+                });
             }
         });
     }
@@ -163,4 +179,6 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
     public void viewfail(int code) {
 
     }
+
+
 }

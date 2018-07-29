@@ -33,6 +33,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerHolder> {
     @Override
     public RecyclerHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         mView = LayoutInflater.from(context).inflate(R.layout.item_show, null);
+
         return new RecyclerHolder(mView);
     }
 
@@ -44,13 +45,27 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerHolder> {
         recyclerHolder.item_show_fresco_image.setImageURI(image);
         recyclerHolder.item_show_tv_title.setText(title);
         recyclerHolder.item_show_tv_price.setText("￥"+price);
+        recyclerHolder.itemView.setTag(i);
+        recyclerHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mOnItemclick.itemclick(mData);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return mData.size();
     }
+  public onItemclick mOnItemclick;
+
+    public void setOnItemclick(onItemclick onItemclick) {
+        mOnItemclick = onItemclick;
+    }
 
 
-
+    public interface onItemclick{
+        void itemclick(List<GoodBean.DataBean> mData);
+   }
 }
