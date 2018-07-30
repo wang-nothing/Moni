@@ -14,11 +14,7 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 
 import java.util.List;
 
-/**
- * author:admin
- * Date:2018-7-28 10:12
- * Project：Moni
- */
+
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerHolder> {
     private Context context;
     private List<GoodBean.DataBean> mData;

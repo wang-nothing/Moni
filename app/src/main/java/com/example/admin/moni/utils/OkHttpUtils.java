@@ -5,11 +5,6 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
-/**
- * author:admin
- * Date:2018-7-28 9:56
- * Project：Moni
- */
 public class OkHttpUtils {
     private static OkHttpClient client = null;
     public OkHttpUtils(){

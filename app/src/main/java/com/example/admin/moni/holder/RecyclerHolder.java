@@ -8,11 +8,7 @@ import android.widget.TextView;
 import com.example.admin.moni.R;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/**
- * author:admin
- * Date:2018-7-28 10:12
- * Project：Moni
- */
+
 public class RecyclerHolder extends RecyclerView.ViewHolder {
     public SimpleDraweeView item_show_fresco_image;
     public TextView item_show_tv_title,item_show_tv_price;

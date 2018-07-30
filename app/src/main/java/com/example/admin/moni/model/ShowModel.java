@@ -12,11 +12,7 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-/**
- * author:admin
- * Date:2018-7-28 9:59
- * Project：Moni
- */
+
 public class ShowModel {
     private static final String TAG = "ShowModel";
     private String url = "http://www.zhaoapi.cn/product/searchProducts?keywords=";

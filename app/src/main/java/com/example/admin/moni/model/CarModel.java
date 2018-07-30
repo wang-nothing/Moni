@@ -11,11 +11,6 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-/**
- * author:admin
- * Date:2018-7-28 16:14
- * Project：Moni
- */
 public class CarModel {
     private String url ="http://www.zhaoapi.cn/product/getCarts?uid=71";
     public void getData(final Car_Imodel car_imodel){

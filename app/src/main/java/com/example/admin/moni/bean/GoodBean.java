@@ -2,11 +2,6 @@ package com.example.admin.moni.bean;
 
 import java.util.List;
 
-/**
- * author:admin
- * Date:2018-7-28 10:00
- * Project：Moni
- */
 public class GoodBean {
     /**
      * msg : 查询成功

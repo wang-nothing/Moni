@@ -9,11 +9,7 @@ import com.example.admin.moni.model.Shoping_Imodel;
 import com.example.admin.moni.view.Car_Iview;
 import com.example.admin.moni.view.Shoping_Iview;
 
-/**
- * author:admin
- * Date:2018-7-28 16:14
- * Project：Moni
- */
+
 public class CarPresenter implements Shoping_Ipresenter {
     private Car_Iview mCar_iview;
     private CarModel mCarModel;

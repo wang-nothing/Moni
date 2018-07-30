@@ -5,11 +5,6 @@ import com.example.admin.moni.model.ShopingModel;
 import com.example.admin.moni.model.Shoping_Imodel;
 import com.example.admin.moni.view.Shoping_Iview;
 
-/**
- * author:admin
- * Date:2018-7-28 16:14
- * Project：Moni
- */
 public class ShopingPresenter implements Shoping_Ipresenter {
     private Shoping_Iview mShoping_iview;
     private ShopingModel mShopingModel;

@@ -17,10 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private ImageView mian_image_search,main_image_delete;
-    private TextView main_tv_cancel;
+    private TextView mian_image_search;
     private EditText main_et_search;
-    private AutoFlowLayout main_autoflowlayout;
+    private AutoFlowLayout main_autoflowlayout,main_auto;
     private List<String> mList;
 
     @Override
@@ -33,17 +32,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initViews() {
         mList = new ArrayList<>();
         main_autoflowlayout = findViewById(R.id.main_autoflowlayout);
+        main_auto = findViewById(R.id.main_auto);
         mian_image_search = findViewById(R.id.mian_image_search);
-        main_tv_cancel = findViewById(R.id.main_tv_cancel);
-        main_image_delete = findViewById(R.id.main_image_delete);
         main_et_search = findViewById(R.id.main_et_search);
         initImageListener();
     }
 
     private void initImageListener() {
         mian_image_search.setOnClickListener(this);
-        main_tv_cancel.setOnClickListener(this);
-        main_image_delete.setOnClickListener(this);
     }
 
     @Override
@@ -55,17 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mList.add(et_text);
 
                 Myadapter();
-                break;
-
-            case R.id.main_tv_cancel:
-                main_et_search.getText().clear();
-                break;
-
-            case R.id.main_image_delete:
-                main_et_search.getText().clear();
-                mList.clear();
-                main_autoflowlayout.removeAllViews();
-                break;
         }
     }
 
@@ -94,4 +79,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
 }

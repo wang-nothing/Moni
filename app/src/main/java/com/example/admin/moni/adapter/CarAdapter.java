@@ -13,11 +13,7 @@ import com.example.admin.moni.holder.GroupHolder;
 
 import java.util.List;
 
-/**
- * author:admin
- * Date:2018-7-28 16:57
- * Project：Moni
- */
+
 public class CarAdapter extends BaseExpandableListAdapter {
     private Context context;
     private List<CarBean.DataBean> mData;

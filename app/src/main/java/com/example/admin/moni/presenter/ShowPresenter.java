@@ -5,11 +5,7 @@ import com.example.admin.moni.model.ShowModel;
 import com.example.admin.moni.model.Show_Imodel;
 import com.example.admin.moni.view.Show_Iview;
 
-/**
- * author:admin
- * Date:2018-7-28 9:59
- * Project：Moni
- */
+
 public class ShowPresenter implements Show_Ipresenter{
     private Show_Iview mShow_iview;
     private ShowModel mShowModel;

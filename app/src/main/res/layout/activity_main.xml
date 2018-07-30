@@ -13,38 +13,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/search_bg">
-            <ImageView
-                android:id="@+id/mian_image_search"
-                android:layout_width="20dp"
-                android:layout_height="35dp"
-                android:src="@mipmap/search"
-                android:layout_marginLeft="7dp"/>
+        <ImageView
+            android:id="@+id/mian_image_back"
+            android:layout_width="20dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/back"/>
+
             <EditText
                 android:id="@+id/main_et_search"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="35dp"
                 android:layout_marginLeft="7dp"
                 android:hint="请在里面搜索"
                 android:background="@null"/>
-        </LinearLayout>
-            <TextView
-                android:id="@+id/main_tv_cancel"
-                android:layout_width="35dp"
+            <ImageView
+                android:layout_width="20dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="7dp"
-                android:layout_marginRight="7dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:text="取消"
-                />
-    </LinearLayout>
+                android:src="@drawable/xiangji"/>
+        <TextView
+            android:id="@+id/mian_image_search"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="搜索"
+            android:layout_marginLeft="7dp"/>
+        </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -57,16 +51,41 @@
                 android:layout_marginLeft="7dp"
                 android:gravity="center_vertical"
                 android:text="最近搜索"/>
-            <ImageView
-                android:id="@+id/main_image_delete"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@mipmap/delete"/>
         </LinearLayout>
     <com.example.library.AutoFlowLayout
         android:id="@+id/main_autoflowlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         ></com.example.library.AutoFlowLayout>
 
+    <TextView
+        android:text="猜你想找"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/search_bg"
+            android:gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:text="情侣T恤"
+            android:textSize="17dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/search_bg"
+            android:gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:text="条纹衬衫男"
+            android:textSize="17dp" />
+    </LinearLayout>
 </LinearLayout>

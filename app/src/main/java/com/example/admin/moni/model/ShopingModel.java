@@ -10,11 +10,7 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-/**
- * author:admin
- * Date:2018-7-28 16:14
- * Project：Moni
- */
+
 public class ShopingModel {
     private String url ="http://www.zhaoapi.cn/product/addCart?uid=71&pid=";
     public void getData(final Shoping_Imodel shoping_imodel, int pid){

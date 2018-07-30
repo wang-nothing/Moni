@@ -2,11 +2,7 @@ package com.example.admin.moni.bean;
 
 import java.util.List;
 
-/**
- * author:admin
- * Date:2018-7-28 16:55
- * Project：Moni
- */
+
 public class CarBean {
     /**
      * msg : 请求成功
